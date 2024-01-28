@@ -30,6 +30,11 @@ public static class AprovadorDePedidos
         var data = await req.Content.ReadAsAsync<dynamic>();
         string produto = data?.produto;
 
+        if (string.IsNullOrWhiteSpace(produto))
+        {
+            return new BadRequestObjectResult("Necessário forcener um produto!");
+        }
+
         string instanceId = await starter.StartNewAsync("OrquestradorAprovacaoPedido", null, produto);
         log.LogInformation("Iniciada orquestração com ID = '{instanceId}' para o produto '{produto}'.", instanceId, produto);
 
@@ -76,4 +81,3 @@ public static class AprovadorDePedidos
     }
 
 }
-
