@@ -21,8 +21,8 @@ public class Produto
 public static class AprovadorDePedidos
 {
 
-    [FunctionName("IniciarAprovacaoProcessoHttp")]
-    public static async Task<IActionResult> IniciarAprovacaoProcessoHttp(
+    [FunctionName("IniciarAprovacaoProcesso")]
+    public static async Task<IActionResult> IniciarAprovacaoProcesso(
         [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequestMessage req,
         [DurableClient] IDurableOrchestrationClient starter,
         ILogger log)
