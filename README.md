@@ -19,7 +19,7 @@ Sugerimos utilizar o <a href="https://www.postman.com/">Postman</a> para fazer a
 <br>
 
 1. Faça uma requisição do tipo POST utilizando o endpoint da inicialização do orquestrador:
-https://myorderfunctions.azurewebsites.net/api/IniciarAprovacaoProcesso
+https://orderfunction.azurewebsites.net/api/IniciarAprovacaoProcesso?
 <a href="#">![Empty Post!](project/assets/empty-post.png "Empty POST")</a>
 Quando a requisição é feita sem passar um produto através do body, retorna a mensagem 'Necessário fornecer um produto!'
 
